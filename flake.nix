@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url     = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url     = "github:NixOS/nixpkgs/nixos-25.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -11,7 +11,7 @@
       in {
         devShells.default = pkgs.mkShell {
           buildInputs = [
-            pkgs.go_1_22
+            pkgs.go_1_23
           ];
         };
 
@@ -24,7 +24,7 @@
 
             buildPhase = "make";
 
-            nativeBuildInputs = [ pkgs.go_1_22 ];
+            nativeBuildInputs = [ pkgs.go_1_23 ];
             buildInputs = [];
 
             installPhase = ''
